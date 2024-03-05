@@ -19,11 +19,11 @@ int main(void)
     // For my reference, here's the info for the first robot:
     // name - Wall-E, age - 0 (he doesn't exist yet)
     // catchprase - WaaAAaall-Eeeee
-    printf("Adding Robot: Wall-E");
+    printf("Adding Robot: Wall-E\n");
     add_robot_beginning(&MotherBoard, "Wall-E", 0, "WaaAAaall-Eeeee");
 
     // Let's run a robo report!
-    printf("Running Report");
+    printf("Running Report\n");
     robot_report(&MotherBoard, "Wall-E");
 
     // Shall we add another robot?

@@ -21,8 +21,8 @@ void robot_report(robot_s **MotherBoard, char *name)
         // using strcmp
         if (strcmp((TempBot)->name, name) == 0)
         {
-            printf("%s is %d robots from the front of the line", name, counter);
-            printf("%s", (TempBot)->Catchphrase);
+            printf("%s is %d robots from the front of the line\n", name, counter);
+            printf("%s\n", (TempBot)->Catchphrase);
             // We found our bot, so let's return
             return;
         }
@@ -30,7 +30,7 @@ void robot_report(robot_s **MotherBoard, char *name)
         // In case something goes wrong
         else
         {
-            printf("Unexpected Error Occured");
+            printf("Unexpected Error Occured\n");
         }
 
         //Don't forget to iterate!
