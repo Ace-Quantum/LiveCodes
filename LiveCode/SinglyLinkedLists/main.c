@@ -20,7 +20,7 @@ int main(void)
     // name - Wall-E, age - 0 (he doesn't exist yet)
     // catchprase - WaaAAaall-Eeeee
     printf("Adding Robot: Wall-E\n");
-    add_robot_beginning(MotherBoard, "Wall-E", 0, "WaaAAll-EEEE");
+    add_robot_beginning(&MotherBoard, "Wall-E", 0, "WaaAAll-EEEE");
 
     // Let's run a robo report!
     printf("Running Report\n");

@@ -13,7 +13,7 @@ robot_s *add_robot_beginning(robot_s **MotherBoard, char *name, int age, char *p
     // In my understanding, we need to make sure we have that initial pointer
     // Even if MotherBoard herself is pointing to NULL
     // Derek please correct me if I'm wrong
-    if (Motherboard == NULL)
+    if (MotherBoard == NULL)
     {
         return NULL;
     }
@@ -25,7 +25,7 @@ robot_s *add_robot_beginning(robot_s **MotherBoard, char *name, int age, char *p
     new_robot = malloc(sizeof(robot_s));
 
     // check to see if we have the space available
-    if new_robot == NULL
+    if (new_robot == NULL)
     {
         return NULL;
     }
