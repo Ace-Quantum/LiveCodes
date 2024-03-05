@@ -22,6 +22,6 @@ robot_s *add_robot_beginning(robot_s **MotherBoard, char *name, int age, char *p
 robot_s *add_robot_end(robot_s **MotherBoard, char *name, int age, char *phrase);
 
 // Robot report for reporting robots
-int robot_report(robot_s **MotherBoard, char *name);
+void robot_report(robot_s **MotherBoard, char *name);
 
 #endif
