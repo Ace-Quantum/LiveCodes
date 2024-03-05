@@ -6,7 +6,7 @@
  * So I hope you don't mind 
  * my style of documentation, enjoy.
 */
-
+//Just seeing if this goes through
 typedef struct robot_a
 {
 	char *name;
