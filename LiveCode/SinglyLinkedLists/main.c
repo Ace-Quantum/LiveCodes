@@ -30,21 +30,22 @@ int main(void)
     // I think it's Push's Turn!
     // name - Push, age - 29
     // catchprase - Thank you for keeping the park clean!
-    printf("Adding Robot: Push");
+    printf("Adding Robot: Push\n");
     add_robot_beginning(&MotherBoard, "Push", 29, "Thank you for keeping the park clean!");
 
     // Another report!
-    printf("Running Report");
+    printf("Running Report\n");
     robot_report(&MotherBoard, "Wall-E");
     robot_report(&MotherBoard, "Push");
 
     // And finally, let's not let Wall-E be the last line of defense.
     // name - Red Tornado, age - 64
     // catchprase - "Whoosh"
+    printf("Adding Robot: Red Tornado\n")
     add_robot_end(&MotherBoard, "Red Tornado", 64, "Whoosh");
 
     // One last report! Let's see them in the order we added them
-    printf("Running Report");
+    printf("Running Report\n");
     robot_report(&MotherBoard, "Wall-E");
     robot_report(&MotherBoard, "Push");
     robot_report(&MotherBoard, "Red Tornado");
