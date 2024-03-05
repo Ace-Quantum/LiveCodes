@@ -17,13 +17,14 @@ void robot_report(robot_s **MotherBoard, char *name)
     // Start of While Loop
     while (TempBot != NULL)
     {
+
         // if we find our robot, let's say where they are in line
         // and print their catchphrase
         // using strcmp
         // If Statement
         if (strcmp((TempBot)->name, name) == 0)
         {
-            printf("%s is %d robots from the front of the line\n", TempBot->name, counter);
+            printf("%s is %d robots t=from the front of the line\n", name, counter);
             printf("%s\n", TempBot->Catchphrase);
 
             // We found our bot, so let's return
@@ -36,10 +37,10 @@ void robot_report(robot_s **MotherBoard, char *name)
         //I wasn't and I seg faulted because of it :(
         TempBot = TempBot->next;
         counter++;
+    }
 
     //end of while loop
-    }
     // Finally let's have an error statement
     // In case something goes wrong
-    printf("Unexpected Error Occured\n");
+    printf("Unexpected error occured\n");
 }

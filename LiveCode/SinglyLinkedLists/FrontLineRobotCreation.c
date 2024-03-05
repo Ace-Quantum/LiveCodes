@@ -3,10 +3,6 @@
 #include <string.h>
 #include "RobotHeader.h"
 
-/**
- * 
-*/
-
 robot_s *add_robot_beginning(robot_s **MotherBoard, char *name, int age, char *phrase)
 {
     // Let's first see if we have a MotherBoard in the first place
@@ -34,19 +30,21 @@ robot_s *add_robot_beginning(robot_s **MotherBoard, char *name, int age, char *p
     // But let's make sure we have space for everything else
     // As well as the null terminator
     // Using StrLen
-    new_robot->name = malloc(strlen(name) +1);
-    new_robot->Catchphrase = malloc(strlen(phrase));
+
+    new_robot->name = malloc(strlen(name) + 1);
+    new_robot->Catchphrase = malloc(strlen(phrase) + 1);
     
     //if we don't have space, let's free the robot
-    // Check the name and the catchphrase
-    // Then free the name, catchphrase, and finally the robot
     if (new_robot->name == NULL || new_robot->Catchphrase == NULL)
     {
+        // Check the name and the catchphrase
+        // Then free the name, catchphrase, and finally the robot
         free(new_robot->name);
         free(new_robot->Catchphrase);
         free(new_robot);
         return NULL;
     }
+
 
     // Assign all the fields for the new robot
     // Using strcpy or otherwise

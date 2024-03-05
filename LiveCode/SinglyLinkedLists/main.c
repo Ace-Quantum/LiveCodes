@@ -20,35 +20,27 @@ int main(void)
     // name - Wall-E, age - 0 (he doesn't exist yet)
     // catchprase - WaaAAaall-Eeeee
     printf("Adding Robot: Wall-E\n");
-    add_robot_beginning(&MotherBoard, "Wall-E", 0, "WaaAAll-EEEE");
+    add_robot_beginning(&MotherBoard, "Wall-E", 0, "WaaaAAAAaallll-EEEeeee");
 
     // Let's run a robo report!
     printf("Running Report\n");
-    robot_report(&MotherBoard, "Wall-E");
 
     // Shall we add another robot?
     // I think it's Push's Turn!
     // name - Push, age - 29
     // catchprase - Thank you for keeping the park clean!
-    printf("Adding Robot: Push\n");
-    add_robot_beginning(&MotherBoard, "Push", 29, "Thank you for keeping the park clean!");
+    // printf("Adding Robot: Push\n");
 
     // Another report!
-    printf("Running Report\n");
-    robot_report(&MotherBoard, "Wall-E");
-    robot_report(&MotherBoard, "Push");
+    // printf("Running Report\n");
 
     // And finally, let's not let Wall-E be the last line of defense.
     // name - Red Tornado, age - 64
     // catchprase - "Whoosh"
-    printf("Adding Robot: Red Tornado\n");
-    add_robot_end(&MotherBoard, "Red Tornado", 64, "Whoosh");
+    // printf("Adding Robot: Red Tornado\n");
 
     // One last report! Let's see them in the order we added them
-    printf("Running Report\n");
-    robot_report(&MotherBoard, "Wall-E");
-    robot_report(&MotherBoard, "Push");
-    robot_report(&MotherBoard, "Red Tornado");
+    // printf("Running Report\n");
 
     // What other robots should we add?
 
