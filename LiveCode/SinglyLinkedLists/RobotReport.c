@@ -35,8 +35,5 @@ void robot_report(robot_s **MotherBoard, char *name)
     }
         // Finally let's have an error statement
         // In case something goes wrong
-        else
-        {
-            printf("Unexpected Error Occured\n");
-        }
+        printf("Unexpected Error Occured\n");
 }
