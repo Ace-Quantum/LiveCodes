@@ -13,7 +13,7 @@ robot_s *add_robot_beginning(robot_s **MotherBoard, char *name, int age, char *p
     // In my understanding, we need to make sure we have that initial pointer
     // Even if MotherBoard herself is pointing to NULL
     // Derek please correct me if I'm wrong
-    if (MotherBoard == NULL)
+    if (Motherboard == NULL)
     {
         return NULL;
     }
@@ -25,18 +25,21 @@ robot_s *add_robot_beginning(robot_s **MotherBoard, char *name, int age, char *p
     new_robot = malloc(sizeof(robot_s));
 
     // check to see if we have the space available
-    if (new_robot == NULL)
+    if new_robot == NULL
     {
-        return (NULL);
+        return NULL;
     }
 
     // We have space for the robot
     // But let's make sure we have space for everything else
     // As well as the null terminator
-    new_robot->name = malloc(strlen(name) + 1);
-    new_robot->Catchphrase = malloc(strlen(phrase) + 1);
+    // Using StrLen
+    new_robot->name = malloc(strlen(name) +1);
+    new_robot->Catchphrase = malloc(strlen(phrase));
     
     //if we don't have space, let's free the robot
+    // Check the name and the catchphrase
+    // Then free the name, catchphrase, and finally the robot
     if (new_robot->name == NULL || new_robot->Catchphrase == NULL)
     {
         free(new_robot->name);
@@ -49,11 +52,11 @@ robot_s *add_robot_beginning(robot_s **MotherBoard, char *name, int age, char *p
     // Using strcpy or otherwise
     strcpy(new_robot->name, name);
     strcpy(new_robot->Catchphrase, phrase);
-    (new_robot)->age = age;
+    new_robot->age = age;
 
     // take the node Motherboard was pointing to
     // and have our new robot point to it
-    (new_robot)->next = *MotherBoard;
+    new_robot->next = *MotherBoard;
 
     // now that we have updated our list,
     // update MotherBoard on the situation
@@ -61,5 +64,4 @@ robot_s *add_robot_beginning(robot_s **MotherBoard, char *name, int age, char *p
 
     // return MotherBoard after her update
     return (*MotherBoard);
-
 }
