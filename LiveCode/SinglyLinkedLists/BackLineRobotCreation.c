@@ -91,6 +91,7 @@ robot_s *add_robot_end(robot_s **MotherBoard, char *name, int age, char *phrase)
         // Since we've got a pointer to the last robot,
         // Let's assign its value to our new robot!
         temp_bot->next = new_robot;
+    }
 
     // For posterities sake, 
     // let's go ahead and return our new robot
