@@ -30,10 +30,13 @@ int main(void)
     // I think it's Push's Turn!
     // name - Push, age - 29
     // catchprase - Thank you for keeping the park clean!
-    // printf("Adding Robot: Push\n");
+    printf("Adding Robot: Push\n");
+    add_robot_beginning(&MotherBoard, "Push", 29, "Thank you for keeping the park clean!");
 
     // Another report!
-    // printf("Running Report\n");
+    printf("Running Report\n");
+    robot_report(&MotherBoard, "Wall-E");
+    robot_report(&MotherBoard, "Push");
 
     // And finally, let's not let Wall-E be the last line of defense.
     // name - Red Tornado, age - 64
