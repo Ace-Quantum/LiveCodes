@@ -4,7 +4,9 @@
 #include "RobotHeader.h"
 
 /**
- * 
+ * I just want to look at this code
+ * Because it's good code
+ * It's a shame I'm going to have to redo it
 */
 
 robot_s *add_robot_end(robot_s **MotherBoard, char *name, int age, char *phrase)
