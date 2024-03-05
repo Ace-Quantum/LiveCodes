@@ -44,7 +44,7 @@ int main(void)
     add_robot_end(&MotherBoard, "Red Tornado", 64, "Whoosh");
 
     // One last report! Let's see them in the order we added them
-    printf("Running Report")
+    printf("Running Report");
     robot_report(&MotherBoard, "Wall-E");
     robot_report(&MotherBoard, "Push");
     robot_report(&MotherBoard, "Red Tornado");
