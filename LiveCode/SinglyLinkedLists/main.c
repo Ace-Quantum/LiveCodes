@@ -41,10 +41,14 @@ int main(void)
     // And finally, let's not let Wall-E be the last line of defense.
     // name - Red Tornado, age - 64
     // catchprase - "Whoosh"
-    // printf("Adding Robot: Red Tornado\n");
+    printf("Adding Robot: Red Tornado\n");
+    add_robot_end(&MotherBoard, "Red Tornado", 64, "Whoosh");
 
     // One last report! Let's see them in the order we added them
-    // printf("Running Report\n");
+    printf("Running Report\n");
+    robot_report(&MotherBoard, "Wall-E");
+    robot_report(&MotherBoard, "Push");
+    robot_report(&MotherBoard, "Red Tornado");
 
     // What other robots should we add?
 
