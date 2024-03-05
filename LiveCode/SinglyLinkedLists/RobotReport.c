@@ -7,28 +7,24 @@ void robot_report(robot_s **MotherBoard, char *name)
 {
     // Let's use a TempBot to let MotherBoard stay in place
     robot_s *TempBot;
-    TempBot = NULL;
+    TempBot = MotherBoard;
 
     // And an integer we can use as reference later
     int counter;
 
     // While TempBot is not at the end of the line
-    // Or TempBot is not the robot we're looking for
     // We'll loop through to find the robot we're looking for
-    while (TempBot != NULL || (TempBot)->name != name)
+    while (TempBot != NULL)
     {
-        // If the temp bot is null
-        // Let's print an error statement
-        if (TempBot == NULL)
-        {
-            printf("Robot Not Found");
-        }
         // if we find our robot, let's say where they are in line
         // and print their catchphrase
-        elif ((TempBot)->name == name)
+        // using strcmp
+        if (strcmp((TempBot)->name, name) == 0)
         {
             printf("%s is %d robots from the front of the line", name, counter);
             printf("%s", (TempBot)->Catchphrase);
+            // We found our bot, so let's return
+            return;
         }
         // Finally let's have an error statement
         // In case something goes wrong
@@ -38,6 +34,9 @@ void robot_report(robot_s **MotherBoard, char *name)
         }
 
         //Don't forget to iterate!
+        //We need to iterate tempbot while we're here
+        //I wasn't and I seg faulted because of it :(
+        TempBot = TempBot->next;
         counter++;
     }
 }
