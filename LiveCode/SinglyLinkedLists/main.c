@@ -24,7 +24,7 @@ int main(void)
 
     // Let's run a robo report!
     printf("Running Report\n");
-    robot_report(*MotherBoard, "Wall-E");
+    robot_report(&MotherBoard, "Wall-E");
 
     // Shall we add another robot?
     // I think it's Push's Turn!
