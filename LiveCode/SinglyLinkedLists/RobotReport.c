@@ -10,7 +10,7 @@ void robot_report(robot_s **MotherBoard, char *name)
     TempBot = *MotherBoard;
 
     // And an integer we can use as reference later
-    int counter = 0;
+    int counter = 1;
 
     // While TempBot is not at the end of the line
     // We'll loop through to find the robot we're looking for

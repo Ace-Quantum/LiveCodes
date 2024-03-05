@@ -9,6 +9,12 @@
 
 robot_s *add_robot_end(robot_s **MotherBoard, char *name, int age, char *phrase)
 {
+    // Let's go ahead and check if MotherBoard exists
+    if (MotherBoard == NULL)
+    {
+        return NULL;
+    }
+
     // as before, we'll create a new robot and set it to NULL
     // but this time we'll also create a temporary robot
     // to help us keep track of where we're at in our army
@@ -23,9 +29,23 @@ robot_s *add_robot_end(robot_s **MotherBoard, char *name, int age, char *phrase)
     if (new_robot == NULL)
         return NULL;
 
-    // Time to assign our Robot their attributes!
-    (new_robot)->name = name;
-    (new_robot)->Catchphrase = phrase;
+    // Let's get space for that robot!
+    new_robot->name = malloc(strlen(name) + 1);
+    new_robot->Catchphrase = malloc(strlen(phrase) + 1);
+
+    // Same as before, check if we have space and free if not
+    if (new_robot->name == NULL || new_robot->Catchphrase == NULL)
+    {
+        free(new_robot->name);
+        free(new_robot->Catchphrase);
+        free(new_robot);
+        return NULL;
+    }
+
+    // Assign all the fields for the new robot
+    // Using strcpy or otherwise
+    strcpy(new_robot->name, name);
+    strcpy(new_robot->Catchphrase, phrase);
     (new_robot)->age = age;
 
     // ***VERY IMPORTANT!!!***
