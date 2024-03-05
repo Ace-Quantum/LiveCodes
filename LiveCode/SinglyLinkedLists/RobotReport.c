@@ -26,12 +26,6 @@ void robot_report(robot_s **MotherBoard, char *name)
             // We found our bot, so let's return
             return;
         }
-        // Finally let's have an error statement
-        // In case something goes wrong
-        else
-        {
-            printf("Unexpected Error Occured\n");
-        }
 
         //Don't forget to iterate!
         //We need to iterate tempbot while we're here
@@ -39,4 +33,10 @@ void robot_report(robot_s **MotherBoard, char *name)
         TempBot = TempBot->next;
         counter++;
     }
+        // Finally let's have an error statement
+        // In case something goes wrong
+        else
+        {
+            printf("Unexpected Error Occured\n");
+        }
 }
