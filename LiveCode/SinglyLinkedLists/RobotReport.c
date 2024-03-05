@@ -7,7 +7,7 @@ void robot_report(robot_s **MotherBoard, char *name)
 {
     // Let's use a TempBot to let MotherBoard stay in place
     robot_s *TempBot;
-    *TempBot = *MotherBoard;
+    TempBot = *MotherBoard;
 
     // And an integer we can use as reference later
     int counter;
