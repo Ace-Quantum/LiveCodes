@@ -5,6 +5,13 @@
 #include <stdarg.h>
 #include <limits.h>
 
+// Did you think I was going to give you all of the code?
+// I have to leave some of it up to you.
+// Thusly, this file is where we differ.
+// I get to use PrintF because I'm not getting graded on it
+// (☞ﾟヮﾟ)☞
+// sorrynotsorry
+
 /**
  * print_char - prints a character
  * @args: va_list args
