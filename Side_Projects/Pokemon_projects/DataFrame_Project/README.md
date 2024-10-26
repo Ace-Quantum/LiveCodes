@@ -1,1 +1,0 @@
-I'll treat this document as a place to put resources and whatnot
