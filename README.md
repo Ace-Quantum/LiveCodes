@@ -6,9 +6,11 @@ There’s multiple things that I left out of both live codes, for the sake of no
 
 Creating a Robot Army in C! (Singly Linked Lists):
 This was a fun livecode I did for the new students learning C. Starting with the header file, we can see a simple function list. There’s a struct for our robots, and three following functions. One to add a robot to the beginning of the list, one to add a robot to the back of the list, and one to print the reports for the robots. Each of these functions exist in their own file in the directory. One of the things I didn’t include for the students was the function for freeing a node in a linked list, it was cut primarily for time but also so the students didn’t have the entirety of their assignment handed to them. There’s a small typo left in the Robot Report from when I was running it live on stage. The students were keen on pointing out syntax errors as I programmed, but left the typo in the print statement for me to discover later in the live code. It was an endearing moment, so I’ve left it there for memory’s sake.
+![image](https://github.com/user-attachments/assets/b9dc3c2a-e102-46f7-81f8-845903a05dbf)
 
 PrintF:
 This is a livecode that happened later in the trimester for the new students. As there’s a lot of moving parts on this one and it’s a more serious project, I didn’t add too much flair other than a cheeky joke on the students. The assignment is to recreate the PrintF function in C from scratch, using only a handful of the lowest level commands C has to offer. By this point I had the smart idea to set aside the actual code in a different directory, and have the skeleton code front facing. This way if someone wanted to try coding it themselves they could! I broke PrintF into three parts, the part that tokenizes input, the part that searches for the correlating function within the command, and the functions that fully print out the characters. 
+![image](https://github.com/user-attachments/assets/4f1e3189-45e3-48cc-98e3-afe9c35be066)
 
 Thank you for your time! Please feel free to connect with me on LinkdIn!
 	https://www.linkedin.com/in/ace-morton/
