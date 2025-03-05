@@ -7,6 +7,6 @@ int main(void)
     // declaring an int just because
     int bc = 0;
 
-    bc = _printf("Hello %s how are you?\n", "world!");
+    bc = _printf("Don't %s\n", "panic!!!");
     return 0;
 }

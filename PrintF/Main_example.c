@@ -16,44 +16,44 @@ int _printf(const char *format, ...)
     va_start(args, format);
 
     // Check to make sure we have input
-    if ()
+    if (!format)
     {
-        printf("");
+        printf("Error invalid format!");
         return 0;
     }
 
     // While we have characters, we'll move forward.
-    while ()
+    while (*format != '\0')
     {
         // check for the format identifier
-        if ()
+        if (*format == '%')
         {
             // grab the next character, as it's the specifier
-
+            format++;
             // if there is no character afterwards, handle errors
-            if ()
+            if (!format)
             {
-                printf("");
+                printf("what do you want from me?");
             }
 
             // Call to find the proper printer function
-
+            func_print = get_func(*format);
 
             // if we get the print function, we'll use it
-            if ()
+            if (func_print!= NULL)
             {
                 // using our va_list will pull from the next argument in the list
                 // there is no way to go backwards in this usage of va_list.
-                
+                func_print(args);
             }
         }
         // print the character as is
         else
         {
-            printf("%c", *format);
+            putchar(*format);
         }
         // ITERATE! While loops do not auto iterate.
-        
+        format++;
     }
 
     // finish up using the args and return the end of the program
