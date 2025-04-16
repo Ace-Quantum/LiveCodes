@@ -31,18 +31,18 @@ robot_s *add_robot_beginning(robot_s **MotherBoard, char *name, int age, char *p
     // As well as the null terminator
     // Using StrLen
 
-    new_robot->name = malloc(strlen(name) + 1);
-    new_robot->Catchphrase = malloc(strlen(phrase) + 1);
+    new_robot->name = malloc(strlen(name) +1);
+    new_robot->Catchphrase = malloc(strlen(phrase) +1);
+
     
     //if we don't have space, let's free the robot
-    if (new_robot->name == NULL || new_robot->Catchphrase == NULL)
-    {
-        // Check the name and the catchphrase
-        // Then free the name, catchphrase, and finally the robot
+    if (new_robot->name == NULL || new_robot->Catchphrase == NULL){
         free(new_robot->name);
         free(new_robot->Catchphrase);
         free(new_robot);
         return NULL;
+        // Check the name and the catchphrase
+        // Then free the name, catchphrase, and finally the robot
     }
 
 
